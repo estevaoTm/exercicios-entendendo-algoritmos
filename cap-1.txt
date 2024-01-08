@@ -1,0 +1,9 @@
+Resolução dos exercícios do capítulo 1
+
+1.1 Suponha que você tenha uma lista com 128 nomes e esteja fazendo uma pesquisa binária. Qual seria o número máximo de etapas que você levaria para encontrar o nome desejado?
+
+R: A resposta é encontrada calculando o log2 de 128, que resulta em 7 etapas no máximo para encontrar o nome desejado.
+
+1.2 Suponha que você duplique o tamanho da lista. Qual seria o número máximo de etapas agora?
+
+R: Multiplicar por 2 a lista resulta em 256 itens, cujo log2 é 8. Logo, seriam 8 etapas no máximo para encontrar o nome desejado.
