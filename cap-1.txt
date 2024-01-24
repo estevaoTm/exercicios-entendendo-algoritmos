@@ -7,3 +7,22 @@ R: A resposta é encontrada calculando o log2 de 128, que resulta em 7 etapas no
 1.2 Suponha que você duplique o tamanho da lista. Qual seria o número máximo de etapas agora?
 
 R: Multiplicar por 2 a lista resulta em 256 itens, cujo log2 é 8. Logo, seriam 8 etapas no máximo para encontrar o nome desejado.
+
+Forneça o tempo de execução para cada um dos casos a seguir em termos da notação Big O (exercícios 1.3 a 1.6)
+
+1.3 Você tem um nome e deseja encontrar o número de telefone para esse nome em uma agenda telefônica
+
+R: Para esse caso, é possível aplicar a pesquisa binária, então o tempo de execução é O(log n) 
+
+1.4 Você tem um número de telefone e deseja encontrar o dono dele em uma agenda telefônica (Dica: Deve procurar pela agenda inteira!)
+
+R: Como a agenda não é ordenada de nenhuma forma pelo número, é necessário checar cada linha. Portanto, tempo de execução O(n)
+
+1.5 Você quer ler o número de cada pessoa da agenda telefônica.
+
+R: Para ler o número de cada pessoa, é necessário, também, O(n)
+
+1.6 Você quer ler os número apenas dos nomes que começam com A.
+
+R: Nesse caso, como é só uma letra de toda a agenda, seria O(n/26). Porém, em notação Big O, ignoramos constantes. Logo, o tempo de execução é O(n)
+

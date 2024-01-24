@@ -1,0 +1,21 @@
+Resolução dos exercícios do capítulo 2
+
+2.1 Suponha que você esteja criando um aplicativo para acompanhar suas finanças. Todos os dias você anotará tudo o que gastou e onde gastou. Logo, você terá um monte de inserções e poucas leituras. Você deverá usar um array ou uma lista para implementar este aplicativo?
+
+R: Como o tempo de inserção para listas encadeadas é menor do que para arrays (O(1) x O(n), respectivamente), e esta será a atividade mais realizada no aplicativo, o ideal seria usar uma lista.
+
+2.2 Suponha que você esteja criando um aplicativo para anotar os pedidos dos clientes em um restaurante. Seu aplicativo precisa de uma lista de pedidos. Os garçons adicionam os pedidos a essa lista e os cheges retiram os pedidos da lista. Funciona como uma fila. Os garçons colocam os pedidos no final da fila e os cheges retiram os pedidos do começo dela para cozinhá-los. Você usaria um array ou uma lista encadeada para implementar essa lista?
+
+R: Como não haverá nenhuma leitura aleatória, somente inserção no final da fila e remoção do primeiro elemento, o ideal seria implementar uma lista encadeada. 
+
+2.3 Vamos analisar um experimento. Imagine que o Facebook guarda uma lista de usuários. Quando alguém tenta acessar o Facebook, uma busca é feita  pelo nome do usuário. Se o nome da pessoa está na lista, ela pode continuar o acesso. As pessoas acessam o Facebook com muita frequência, então existem muitas buscas nessa lista. Presuma que o Facebook usa a pesquisa binária para procurar um nome na lista. A pesquisa binária requer acesso aleatório - você precisa ser capaz de acessar o meio da lista de nomes instantaneamente. Sabendo disso, você implementaria essa lista com um array ou uma lista encadeada?
+
+R: Como o maior uso dessa lista será para pesquisa com acesso aleatório, o ideal seria um array ordenado.
+
+2.4 As pessoas se inscrevem no Facebook com muita frequência também. Suponha que você decida usar um array para armazenar a lista de usuários. Quais as desvantagens de um array em relação às inserções? Em particular, imagine que você está usando a pesquisa binária para buscar os logins. O que acontece quando você adiciona novos usuários em um array?
+
+R: As inserções em arrays são lentas, pois para mantê-lo ordenado, é necessário checar por pesquisa binária e mover itens a cada inserção. Assim, a cada adição de um novo usuário, é necessário reordenar o array.
+
+2.5 Na verdade, o Facebook... Compare esta estrutura híbrica (array de listas encadeadas) com arrays e listas encadeadas. É mais lento ou mais rápido para fazer inserções e eliminações nesse caso?
+
+R: Para inserções, é mais rápido que um array e com tempo similar à uma lista encadeada, pois teria que buscar inicialmente o slot da letra inicial do nome em um array (execução O(1)) e inserir o nome no final da lista encadeada (execução O(1)), logo o tempo de execução também seria O(1). Esta é também a mesma lógica para deleção. Já para leitura, como seria necessário primeiro acessar o slot da inicial em um array (O(1)) e depois fazer a leitura em uma lista encadeada (O(n)), o tempo de execução final seria O(n), sendo mais lenta que um array e tão rápida quanto uma lista encadeada. 
